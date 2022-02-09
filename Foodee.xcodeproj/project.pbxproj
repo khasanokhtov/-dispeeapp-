@@ -19,7 +19,6 @@
 		4EBF60E526FA75FB005AF26F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF60E426FA75FB005AF26F /* HomeView.swift */; };
 		4ECB105E26FCC47100DBBFFD /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB105D26FCC47100DBBFFD /* Font.swift */; };
 		FB21496027B3D08A0003D6B5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB21495F27B3D08A0003D6B5 /* Login.swift */; };
-		FB62484927B14D9D0070AB13 /* YelpApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62484827B14D9D0070AB13 /* YelpApiService.swift */; };
 		FB62484B27B160420070AB13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62484A27B160420070AB13 /* HomeViewModel.swift */; };
 		FBB9D58E27B3BE200072E9F1 /* PinCodeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9D58D27B3BE200072E9F1 /* PinCodeLogin.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		4ECB105C26FCC44500DBBFFD /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		4ECB105D26FCC47100DBBFFD /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FB21495F27B3D08A0003D6B5 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		FB62484827B14D9D0070AB13 /* YelpApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpApiService.swift; sourceTree = "<group>"; };
 		FB62484A27B160420070AB13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FBB9D58D27B3BE200072E9F1 /* PinCodeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +155,6 @@
 		FB62484727B14D6E0070AB13 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FB62484827B14D9D0070AB13 /* YelpApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -249,7 +246,6 @@
 			files = (
 				FBB9D58E27B3BE200072E9F1 /* PinCodeLogin.swift in Sources */,
 				4EBF60DD26FA74BA005AF26F /* CGFloat.swift in Sources */,
-				FB62484927B14D9D0070AB13 /* YelpApiService.swift in Sources */,
 				FB21496027B3D08A0003D6B5 /* Login.swift in Sources */,
 				4E60B17D26FB54A000497F05 /* FoodCategories.swift in Sources */,
 				FB62484B27B160420070AB13 /* HomeViewModel.swift in Sources */,
