@@ -12,7 +12,7 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     
-    @Published var businesses = [Business]()
+    
     @Published var searchText = ""
     @Published var fakeDataList = [
         FakeListPhotoModel(title: "title1", src: "https://image.shutterstock.com/image-photo/micro-peacock-feather-hd-imagebest-260nw-1127238599.jpg"),
@@ -23,10 +23,6 @@ final class HomeViewModel: ObservableObject {
     ]
     
     func search() {
-        let live = YelpApiService.live
-        
-        live.search("food", .init(latitude: 42.36, longitude: -71), nil)
-            .assign(to: &$businesses)
     }
  
 }
