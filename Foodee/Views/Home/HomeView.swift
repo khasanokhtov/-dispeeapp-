@@ -15,10 +15,8 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.businesses, id: \.id) { business  in
-                    Text(business.name )
-                }
+            List(viewModel.fakeDataList) { fakeData in
+                Text(fakeData.title)
             }
             .listStyle(.plain)
             .navigationTitle(Text("Черкесск"))
