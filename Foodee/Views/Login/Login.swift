@@ -1,19 +1,21 @@
 //
-//  PinCodeLogin.swift
+//  Login.swift
 //  Foodee
 //
 //  Created by Alex Okhtov on 09.02.2022.
 //
 
+import Foundation
+
 import SwiftUI
 
-let lightGreyColor2 = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
+let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
-let storedUsername2 = "Has"
-let storedPassword2 = "123123"
+let storedUsername = "Has"
+let storedPassword = "123123"
 
 
-struct LoginViewPin: View {
+struct LoginView: View {
     
     @State var username: String = ""
     @State var password: String = ""
@@ -26,9 +28,9 @@ struct LoginViewPin: View {
         
         ZStack{
             VStack {
-                HelloText2()
-                UserImage2()
-                PinNumTextField(username: $username)
+                HelloText()
+                UserImage()
+                PhoneNumTextField(username: $username)
                 //PasswordSecureField(password: $password)
                 if autheticationDidFail {
                     Text("Not correct. Try again.")
@@ -47,7 +49,7 @@ struct LoginViewPin: View {
                         self.authenticationDidSucceed = false
                     }
                 }) {
-                   LoginButtonContent2()
+                   LoginButtonContent()
                 }
             }
             .padding()
@@ -64,22 +66,22 @@ struct LoginViewPin: View {
     }
 }
 
-struct ContentView_Previews2: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginViewPin()
+        LoginView()
     }
 }
 
-struct HelloText2: View {
+struct HelloText: View {
     var body: some View {
-        Text("Введите код!")
+        Text("Добро пожаловать!")
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
     }
 }
 
-struct UserImage2: View {
+struct UserImage: View {
     var body: some View {
         Image("userimage")
             .resizable()
@@ -91,9 +93,9 @@ struct UserImage2: View {
     }
 }
 
-struct LoginButtonContent2: View {
+struct LoginButtonContent: View {
     var body: some View {
-        Text("SEND")
+        Text("LOGIN")
             .font(.headline)
             .foregroundColor(.white)
             .padding()
@@ -103,12 +105,12 @@ struct LoginButtonContent2: View {
     }
 }
 
-struct PinNumTextField: View {
+struct PhoneNumTextField: View {
     
     @Binding var username: String
     
     var body: some View {
-        TextField("Код", text: $username)
+        TextField("Телефон", text: $username)
             .padding()
             .background(lightGreyColor)
             .cornerRadius(5.0)
@@ -116,16 +118,15 @@ struct PinNumTextField: View {
     }
 }
 
-//struct PasswordSecureField: View {
+struct PasswordSecureField: View {
     
-    //@Binding var password: String
+    @Binding var password: String
     
-    //var body: some View {
-        //SecureField("Password", text: $password)
-            //.padding()
-            //.background(lightGreyColor)
-            //.cornerRadius(5.0)
-            //.padding(.bottom, 20)
-    //}
-//}
-
+    var body: some View {
+        SecureField("Password", text: $password)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding(.bottom, 20)
+    }
+}
